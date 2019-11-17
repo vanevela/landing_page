@@ -11,17 +11,18 @@
     <div>
       <header id="header">
         <nav id="nav-bar">
-          <div class="logo">
+          <div class="logo-container">
             <img
               src="https://cdn.pixabay.com/photo/2016/12/07/15/15/lotus-with-hands-1889661_960_720.png"
-              height="62"
-              width="62"
+              height="35"
+              width="35"
               id="header-img"
               alt="cooke house logo"
             />
+            <h4 class="logo">Cookie House</h4>
           </div>
           <ul class="top-nav">
-            <li><a class="nav-link" href="#Home">Features</a></li>
+            <li><a class="nav-link" href="#Features">Features</a></li>
             <li><a class="nav-link" href="#Premium">Premium</a></li>
             <li><a class="nav-link" href="#Pricing">Pricing</a></li>
             <li><a class="nav-link" href="#About">About</a></li>
@@ -33,14 +34,41 @@
           </div>
         </nav>
       </header>
-      <!--
-            !When I finish with nav bar I must uncomment these
-        <div class="container"></div>
-        <section id= "intro">
-          <h1>The cookie house</h1>
-          <p>The best place on earth to buy cookies<p>
+      <main>
+        <section id="presentation">
+          <div class="introduction">
+            <div class="intro-text">
+              <h1>Cookie House</h1>
+              <p>The best place to find cookies in town</p>
+            </div>
+            <form
+              class="ca"
+              action="https://www.freecodecamp.com/email-submit"
+              id="form"
+            >
+              <label id="email-label" for="email"> </label>
+              <input
+                id="email"
+                class="ca-email"
+                type="email"
+                name="email"
+                placeholder="Enter your Email"
+                required
+              />
+              <input
+                id="submit"
+                type="submit"
+                class="ca-submit"
+                value="Sign Up"
+              />
+            </form>
+          </div>
         </section>
-      -->
+        <section id="Features"><h1>Features</h1></section>
+        <section id="Premium"><h1>Premium</h1></section>
+        <section id="Pricing"><h1>Pricing</h1></section>
+        <section id="About"><h1>About</h1></section>
+      </main>
     </div>
     <script src="app.js"></script>
   </body>
