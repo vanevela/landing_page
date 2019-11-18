@@ -11,6 +11,7 @@ header {
 
 body {
   font-family: "Libre Franklin", sans-serif;
+  width: 100%;
 }
 nav {
   display: flex;
@@ -97,6 +98,7 @@ nav {
     display: block;
   }
 }
+
 .nav-active {
   transform: translateX(0%);
 }
@@ -136,7 +138,7 @@ nav {
   justify-content: center;
   align-items: center;
   font-size: 100px;
-  font-weight: 800;
+  font-weight: 900;
   background: linear-gradient(to right, #f2f2f5, white);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -182,19 +184,57 @@ nav {
   text-align: center;
   font-family: "Libre Franklin", sans-serif;
 }
+
+@media screen and (max-width: 1024px) {
+  .introduction {
+    text-align: center;
+    margin-top: 5vh;
+  }
+
+  .intro-text h1 {
+    font-size: 50px;
+    padding: 0px 0px 10px 0px;
+  }
+  .intro-text p {
+    font-size: 16px;
+    padding: 5px 0px 5px 0px;
+  }
+  .ca {
+    padding: 15px 0px 0px 0px;
+  }
+  .ca-submit {
+    width: 50%;
+  }
+  .ca-email {
+    width: 50%;
+  }
+}
+
 #Features,
 #Premium,
 #Pricing,
 #About {
   height: 92vh;
   display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   color: #dfe2e6;
 }
-#Features {
+
+.features {
+  flex: 1;
+  height: 92vh;
   background-color: #a74f41;
 }
+
+.img-features {
+  height: 92vh;
+  flex: 1;
+  display: flex;
+  background-image: url("https://images.unsplash.com/photo-1436565121087-bb8d210c9752?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+}
+
 #Premium {
   background-color: #094c5e;
 }
