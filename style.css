@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Libre+Franklin&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +16,7 @@ body {
 }
 nav {
   display: flex;
+  z-index: 1;
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
@@ -139,9 +141,9 @@ nav {
   align-items: center;
   font-size: 100px;
   font-weight: 900;
-  background: linear-gradient(to right, #f2f2f5, white);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #dfe2e6;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
 }
 .intro-text p {
   margin-top: 5px;
@@ -167,10 +169,15 @@ nav {
   font-family: "Libre Franklin", sans-serif;
   font-size: 16px;
   border-radius: 3px;
+  font-weight: 700;
+}
+.ca-submit:hover {
+  color: #094c5e;
+  background: #dfe2e6;
 }
 .ca-email {
   margin-right: 5px;
-  border: 1px solid rgba(245, 239, 239, 0.404);
+  border: 1px solid #094c5e;
   background: rgba(245, 239, 239, 0.404);
   width: 350px;
   height: 40px;
@@ -179,10 +186,10 @@ nav {
 }
 ::placeholder {
   color: #094c5e;
-  font-weight: bold;
   opacity: 1;
   text-align: center;
   font-family: "Libre Franklin", sans-serif;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 1024px) {
@@ -192,7 +199,7 @@ nav {
   }
 
   .intro-text h1 {
-    font-size: 50px;
+    font-size: 60px;
     padding: 0px 0px 10px 0px;
   }
   .intro-text p {
@@ -200,13 +207,15 @@ nav {
     padding: 5px 0px 5px 0px;
   }
   .ca {
-    padding: 15px 0px 0px 0px;
+    padding: 25px 0px 0px 0px;
+
+    text-align: center;
   }
   .ca-submit {
     width: 50%;
   }
   .ca-email {
-    width: 50%;
+    width: 60%;
   }
 }
 
@@ -217,32 +226,199 @@ nav {
   height: 92vh;
   display: flex;
   width: 100%;
-  justify-content: center;
   align-items: center;
   color: #dfe2e6;
 }
-
-.features {
-  flex: 1;
-  height: 92vh;
+#Features {
   background-color: #a74f41;
 }
-
-.img-features {
-  height: 92vh;
+.features {
   flex: 1;
-  display: flex;
-  background-image: url("https://images.unsplash.com/photo-1436565121087-bb8d210c9752?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+  margin: auto 20px auto 20px;
+}
+.features-text h1 {
+  font-size: 44px;
+  font-weight: 800;
+  color: white;
+}
+.features-text p {
+  margin-top: 10px;
+  font-size: 22px;
+  color: #dbe6e7;
+}
+.img-features {
+  flex: 1;
+  height: 82vh;
+  margin-left: 30px;
+}
+.img-features img {
+  height: 100%;
+  filter: drop-shadow(0px 5px 3px rgb(82, 54, 54));
+}
+.cta-features {
+  padding: 20px 0px 0px 0px;
+}
+.cta-add {
+  border: 2px solid #dbe6e7;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #dd9f9686, #a75a4ede);
+  color: #dbe6e7;
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.cta-add:hover {
+  color: #a74f41;
+  background: #dbe6e7;
+}
+@media screen and (max-width: 1024px) {
+  .img-features {
+    display: none;
+  }
+  #Features {
+    background-image: linear-gradient(90deg, #a74f41, #a74f41b6),
+      url("https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .features {
+    text-align: center;
+  }
 }
 
 #Premium {
   background-color: #094c5e;
+  flex-direction: column;
+  text-align: center;
+}
+.premium-text {
+  flex: 1;
+  margin: 40px 120px 30px 120px;
+}
+
+.premium-text h1 {
+  font-size: 44px;
+  font-weight: 800;
+  color: white;
+}
+.premium-text p {
+  margin-top: 10px;
+  font-size: 22px;
+  color: #dbe6e7;
+}
+.img-premium {
+  flex: 2;
+  margin-top: 20px;
+}
+.img-premium img {
+  filter: drop-shadow(0px 5px 3px black);
+}
+@media screen and (max-width: 1024px) {
+  .img-premium {
+    display: none;
+  }
+  #Premium {
+    flex-direction: row;
+    background-image: linear-gradient(90deg, #094c5e63, #094c5e),
+      url("https://images.unsplash.com/photo-1464411335145-a52ac26409ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 #Pricing {
   background-color: #934156;
+  justify-content: center;
+}
+.pricing {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+.product > .level {
+  background-color: #ddd;
+  color: #934156;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.product > h2 {
+  margin-top: 15px;
+}
+
+.product > ol {
+  margin: 15px 0;
+}
+
+.product > ol > li {
+  padding: 5px 0;
+  list-style: none;
+}
+
+.product > button {
+  border: 0;
+  margin: 15px 0;
+  background-color: #ca8b49;
+  color: #dbe6e7;
+}
+
+.product > button:hover {
+  background: linear-gradient(90deg, #ca8b49, #a75a4ede);
+  transition: background-color 1s;
+}
+.btn {
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  #Pricing {
+    flex-direction: column;
+  }
+  .product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
 }
 #About {
   background-color: #ca8b49;
+  flex-direction: column;
+  justify-content: center;
+}
+#About h1 {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  color: white;
+}
+#About iframe {
+  max-width: 560px;
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  #video {
+    height: 50%;
+  }
 }
 h1 {
   font-family: "Libre Franklin", sans-serif;
